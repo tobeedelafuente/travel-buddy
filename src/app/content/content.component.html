@@ -1,0 +1,23 @@
+<div class="content-container">
+  <form class="form-container" [formGroup]="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Current Location</mat-label>
+      <input type="text" matInput formControlName="{{ field.CURRENT }}" [matAutocomplete]="current">
+      <mat-autocomplete #current="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let current of filteredCurrentLocation | async" [value]="current">
+          {{ current.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Destination</mat-label>
+      <input type="text" matInput formControlName="{{ field.DESTINATION }}" [matAutocomplete]="destination">
+      <mat-autocomplete #destination="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let destination of filteredDestination | async" [value]="destination">
+          {{ destination.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
