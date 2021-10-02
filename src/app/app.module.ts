@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 
+import {GoogleMapsModule} from '@angular/google-maps';
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -48,6 +50,7 @@ const MATERIAL_MODULES = [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
     ...MATERIAL_MODULES,
   ],
   providers: [],

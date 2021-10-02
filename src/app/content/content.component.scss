@@ -1,12 +1,37 @@
 .content-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
-}
 
-.form-container {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .info-container {
+    flex: 0.4;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px;
+
+      .form-field {
+        width: 100%;
+      }
+    }
+
+    .example-card {
+      width: 100%;
+    }
+
+    .mat-list {
+      height: 50vh;
+      overflow: scroll;
+    }
+
+    .mat-list-item {
+      margin-bottom: 40px;
+    }
+  }
+
+  .map-container {
+    flex: 0.575;
+  }
 }
